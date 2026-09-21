@@ -1,171 +1,368 @@
-```html
-<section class="newsgo-landing">
-  <style>
-    .newsgo-landing{font-family:Arial,sans-serif;color:#172033;background:#f6f8fb;line-height:1.7}
-    .ng-container{max-width:1120px;margin:auto;padding:70px 20px}
-    .ng-hero{background:linear-gradient(135deg,#0f172a,#1d4ed8);color:#fff;text-align:center}
-    .ng-badge{display:inline-block;background:#ffffff22;border:1px solid #ffffff44;padding:8px 16px;border-radius:50px;margin-bottom:18px}
-    .ng-hero h1{font-size:46px;line-height:1.2;margin:0 0 18px}
-    .ng-hero p{font-size:18px;max-width:760px;margin:0 auto 28px;color:#e5e7eb}
-    .ng-btn{display:inline-block;background:#ffcc00;color:#111827;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:10px;margin:6px}
-    .ng-btn.dark{background:#111827;color:#fff}
-    .ng-section-title{text-align:center;margin-bottom:35px}
-    .ng-section-title h2{font-size:34px;margin:0 0 10px;color:#111827}
-    .ng-section-title p{color:#64748b;margin:0}
-    .ng-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .ng-card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 10px 30px rgba(15,23,42,.08)}
-    .ng-card h3{margin:0 0 10px;color:#0f172a}
-    .ng-card p{margin:0;color:#64748b}
-    .ng-preview{background:#fff;border-radius:24px;padding:28px;box-shadow:0 12px 35px rgba(15,23,42,.1);text-align:center}
-    .ng-preview img{max-width:100%;border-radius:16px}
-    .ng-price-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .ng-price{background:#fff;border-radius:20px;padding:30px;box-shadow:0 10px 30px rgba(15,23,42,.08);border:2px solid transparent}
-    .ng-price.popular{border-color:#1d4ed8;transform:scale(1.03)}
-    .ng-price h3{font-size:24px;margin:0 0 10px}
-    .ng-price .old{text-decoration:line-through;color:#94a3b8}
-    .ng-price .new{font-size:34px;font-weight:800;color:#1d4ed8;margin:8px 0 18px}
-    .ng-price ul{padding-left:20px;color:#475569}
-    .ng-faq details{background:#fff;margin-bottom:12px;padding:18px 22px;border-radius:14px;box-shadow:0 6px 18px rgba(15,23,42,.06)}
-    .ng-faq summary{font-weight:700;cursor:pointer}
-    .ng-cta{background:#0f172a;color:#fff;text-align:center}
-    .ng-cta h2{font-size:34px;margin:0 0 12px}
-    .ng-cta p{color:#cbd5e1;max-width:720px;margin:0 auto 25px}
-    @media(max-width:768px){
-      .ng-hero h1{font-size:32px}
-      .ng-grid,.ng-price-wrap{grid-template-columns:1fr}
-      .ng-price.popular{transform:none}
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Primary Meta Tags -->
+    <title>CobaKlik - Portal Informasi, Direktori Link & Media Digital Rejang Lebong</title>
+    <meta name="title" content="CobaKlik - Portal Informasi, Direktori Link & Media Digital Rejang Lebong">
+    <meta name="description" content="CobaKlik adalah pusat navigasi informasi digital, rekomendasi tautan, portal berita Curup, Rejang Lebong, Bengkulu, pembangunan desa, dan tips kesehatan.">
+    <meta name="keywords" content="CobaKlik, direktori link, berita rejang lebong, berita terkini curup, informasi desa, aspirasi rakyat bengkulu, tips kesehatan">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="CobaKlik">
+    <link rel="canonical" href="https://cobaklik.eu.org/">
 
-  <div class="ng-hero">
-    <div class="ng-container">
-      <span class="ng-badge">Theme WordPress Portal Berita Modern</span>
-      <h1>Bangun Website Berita Profesional dengan Theme NewsGo</h1>
-      <p>NewsGo adalah theme WordPress yang dirancang untuk portal berita online, media lokal, blog informasi, hingga website magazine yang ingin tampil modern, rapi, cepat, dan mudah dikelola.</p>
-      <a class="ng-btn" href="#harga">Dapatkan Sekarang</a>
-      <a class="ng-btn dark" href="#demo">Lihat Demo</a>
-    </div>
-  </div>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cobaklik.eu.org/">
+    <meta property="og:title" content="CobaKlik - Portal Informasi & Direktori Digital">
+    <meta property="og:description" content="Temukan rujukan informasi Rejang Lebong, berita Curup, pembangunan desa, dan tips bermanfaat di CobaKlik.">
 
-  <div class="ng-container">
-    <div class="ng-section-title">
-      <h2>Kenalin, Ini NewsGo</h2>
-      <p>Theme berita yang ringan, responsif, dan siap dipakai untuk membangun media online sendiri.</p>
-    </div>
+    <!-- Tailwind CSS CDN & FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <div class="ng-preview" id="demo">
-      <img src="https://via.placeholder.com/1000x560?text=Preview+Theme+NewsGo" alt="Preview Theme NewsGo">
-    </div>
-  </div>
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 text-2xl font-black text-slate-900 tracking-tight">
+                <i class="fa-solid fa-arrow-pointer text-primary-600"></i>
+                <span>CobaKlik<span class="text-xs ml-1 px-2 py-0.5 bg-primary-100 text-primary-700 rounded-full font-bold">.eu.org</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 font-medium text-sm text-slate-600">
+                <a href="#berita" class="hover:text-primary-600 transition-colors">Berita & Daerah</a>
+                <a href="#desa" class="hover:text-primary-600 transition-colors">Pembangunan Desa</a>
+                <a href="#aspirasi" class="hover:text-primary-600 transition-colors">Aspirasi & Komunitas</a>
+                <a href="#kesehatan" class="hover:text-primary-600 transition-colors">Tips & Kesehatan</a>
+            </div>
+            <div>
+                <a href="#direktori" class="bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all shadow-sm shadow-primary-500/20">
+                    Jelajahi Direktori
+                </a>
+            </div>
+        </div>
+    </header>
 
-  <div class="ng-container">
-    <div class="ng-section-title">
-      <h2>Fitur Unggulan NewsGo</h2>
-      <p>Dibuat untuk kebutuhan website berita yang aktif update setiap hari.</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-primary-500/20 text-primary-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-primary-500/30">
+                Pusat Navigasi & Direktori Digital
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+                Satu Klik untuk Menemukan Semua Informasi Penting
+            </h1>
+            <p class="text-base md:text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+                CobaKlik menghadirkan kumpulan direktori tautan tepercaya seputar kabar Rejang Lebong, Curup, agenda pembangunan desa, hingga panduan hidup sehat.
+            </p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-md mx-auto relative">
+                <input type="text" id="searchInput" onkeyup="filterLinks()" placeholder="Cari kata kunci (contoh: Curup, Desa, Toge)..." class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-white/10 backdrop-blur-md text-white placeholder-slate-400 border border-white/20 focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-inner text-sm">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-slate-400"></i>
+            </div>
+        </div>
+    </section>
 
-    <div class="ng-grid">
-      <div class="ng-card"><h3>Fast Loading</h3><p>Struktur tema dibuat ringan agar halaman lebih cepat dibuka dan nyaman diakses pembaca.</p></div>
-      <div class="ng-card"><h3>Responsive Design</h3><p>Tampilan tetap rapi di desktop, tablet, dan mobile tanpa membuat layout berantakan.</p></div>
-      <div class="ng-card"><h3>Breaking News</h3><p>Tersedia area headline berjalan untuk menampilkan kabar terbaru atau berita penting.</p></div>
-      <div class="ng-card"><h3>Hero Berita Utama</h3><p>Homepage tampil lebih profesional dengan area berita utama dan grid berita pilihan.</p></div>
-      <div class="ng-card"><h3>Artikel Terkait</h3><p>Menampilkan related post berdasarkan kategori agar pembaca betah membaca artikel lain.</p></div>
-      <div class="ng-card"><h3>Slot Iklan</h3><p>Disediakan area banner iklan untuk header, artikel, sidebar, dan posisi strategis lainnya.</p></div>
-      <div class="ng-card"><h3>Share Button</h3><p>Pembaca bisa membagikan artikel ke Facebook, WhatsApp, X, dan Telegram.</p></div>
-      <div class="ng-card"><h3>Sidebar Berita</h3><p>Dilengkapi popular post, kategori, artikel terbaru, dan widget pendukung lainnya.</p></div>
-      <div class="ng-card"><h3>Mudah Dikustom</h3><p>Logo, warna, menu, footer, dan beberapa bagian tampilan dapat disesuaikan dengan kebutuhan.</p></div>
-    </div>
-  </div>
+    <!-- Directory Content Section -->
+    <main id="direktori" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+        
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold text-slate-900">Direktori Topik & Rujukan Informasi</h2>
+            <p class="text-slate-500 text-sm mt-1">Daftar tautan luar terstruktur berdasarkan bidang pembahasan.</p>
+        </div>
 
-  <div class="ng-container" id="harga">
-    <div class="ng-section-title">
-      <h2>Pilih Paket NewsGo</h2>
-      <p>Sekali beli, langsung bisa digunakan untuk membangun website berita.</p>
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="linksContainer">
 
-    <div class="ng-price-wrap">
-      <div class="ng-price">
-        <h3>Single License</h3>
-        <div class="old">Rp 299.000</div>
-        <div class="new">Rp 149.000</div>
-        <ul>
-          <li>Theme NewsGo</li>
-          <li>Untuk 1 website</li>
-          <li>File theme lengkap</li>
-          <li>Panduan instalasi</li>
-          <li>Support basic</li>
-        </ul>
-        <a class="ng-btn" href="#">Pesan Sekarang</a>
-      </div>
+            <!-- Kategori 1: Berita & Peristiwa Rejang Lebong -->
+            <div class="category-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900" id="berita">Berita & Peristiwa</h3>
+                        <p class="text-xs text-slate-500">Kabar Rejang Lebong, Curup & Bengkulu</p>
+                    </div>
+                </div>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="https://nexuswoot.com/userinfo.php?mod=space&amp;action=view&amp;do=profile&amp;user=lorrine.flockhart_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita rejang lebong hari ini</a></li>
+                    <li><a href="https://prrush.com/userinfo.php?name=Your_Account&amp;username=teodoro-deniehy_449462&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita rejang lebong hari ini</a></li>
+                    <li><a href="https://bravelight.net/profile.php?name=Your_Account&amp;user=lorrine.flockhart_449462&amp;action=view&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita curup terbaru</a></li>
+                    <li><a href="https://brushsharp.com/profile.php?com=profile&amp;username=erwin.law_449462&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita curup terbaru</a></li>
+                    <li><a href="https://gemstonic.com/userinfo.php?user=israel-shank_449462&amp;do=profile&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita curup terbaru</a></li>
+                    <li><a href="https://foodbagtoday.com/userinfo.php?from=space&amp;action=view&amp;username=lewis-hathaway_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita curup terbaru</a></li>
+                    <li><a href="https://skyflypro.com/userinfo.php?from=space&amp;action=view&amp;op=userinfo&amp;name=Your_Account&amp;username=stephen.mcalister-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita curup terbaru</a></li>
+                    <li><a href="https://thefishbowled.com/userinfo.php?action=view&amp;mod=space&amp;do=profile&amp;username=charis_nazario_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://gift-boxs.com/profile.php?name=Your_Account&amp;username=stephen.mcalister-449462&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://advertisingagencywebsite.com/userinfo.php?userinfo=charis_nazario_449462&amp;action=view&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://weseoco.com/userinfo.php?do=profile&amp;user=lorrine.flockhart_449462&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://letsbookmarktoday.com/profile.php?user=adan.lamontagne_449462&amp;do=profile&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://magetique.com/userinfo.php?username=hwa-code.449462&amp;name=Your_Account&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://alianzy-businesspartnership.com/profile.php?userinfo=harvey_rutt-449462&amp;com=profile&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://foodbagtoday.com/userinfo.php?userinfo=erwin.law_449462&amp;do=profile&amp;com=profile&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://sortprofit-business.com/userinfo.php?do=profile&amp;op=userinfo&amp;com=profile&amp;user=israel-shank_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita terkini curup</a></li>
+                    <li><a href="https://alianzy-businesspartnership.com/profile.php?mod=space&amp;op=userinfo&amp;userinfo=teodoro-deniehy_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kabar terbaru rejang lebonng</a></li>
+                    <li><a href="https://nexuswoot.com/profile.php?action=view&amp;op=userinfo&amp;do=profile&amp;user=teodoro-deniehy_449462&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kabar terbaru rejang lebonng</a></li>
+                    <li><a href="https://dentalclinicuk.com/userinfo.php?action=view&amp;username=lorrine.flockhart_449462&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kabar terbaru rejang lebonng</a></li>
+                    <li><a href="https://smartopya.com/userinfo.php?com=profile&amp;do=profile&amp;from=space&amp;user=charis_nazario_449462&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kabar terbaru rejang lebonng</a></li>
+                    <li><a href="https://skyflypro.com/profile.php?mod=space&amp;action=view&amp;username=lewis-hathaway_449462&amp;com=profile&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kabar terbaru rejang lebonng</a></li>
+                    <li><a href="https://skyflypro.com/profile.php?user=louann_driskell-449462&amp;op=userinfo&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kabar terbaru rejang lebonng</a></li>
+                    <li><a href="https://top-fully.com/userinfo.php?username=lorrine.flockhart_449462&amp;do=profile&amp;com=profile&amp;from=space&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kabar terbaru rejang lebonng</a></li>
+                    <li><a href="https://worldrankedlist.com/userinfo.php?from=space&amp;mod=space&amp;user=lesley-mancuso-449462&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>peristiwa rejang lebong</a></li>
+                    <li><a href="https://worldrankedlist.com/profile.php?user=erwin.law_449462&amp;op=userinfo&amp;mod=space&amp;com=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>peristiwa rejang lebong</a></li>
+                    <li><a href="https://cyberzootopia.com/userinfo.php?do=profile&amp;username=lewis-hathaway_449462&amp;com=profile&amp;action=view&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>peristiwa rejang lebong</a></li>
+                    <li><a href="https://brightfrenzy.com/userinfo.php?com=profile&amp;action=view&amp;username=harvey_rutt-449462&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>peristiwa rejang lebong</a></li>
+                    <li><a href="https://dentalclinicuk.com/userinfo.php?op=userinfo&amp;from=space&amp;do=profile&amp;mod=space&amp;userinfo=charis_nazario_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>peristiwa rejang lebong</a></li>
+                    <li><a href="https://multiflay.com/profile.php?com=profile&amp;do=profile&amp;name=Your_Account&amp;userinfo=erwin.law_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>peristiwa rejang lebong</a></li>
+                    <li><a href="https://gemstonic.com/userinfo.php?com=profile&amp;userinfo=charis_nazario_449462&amp;name=Your_Account&amp;action=view&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kejadian hari ini di curup</a></li>
+                    <li><a href="https://addmeintop10.com/userinfo.php?from=space&amp;name=Your_Account&amp;do=profile&amp;mod=space&amp;user=harvey_rutt-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kejadian hari ini di curup</a></li>
+                    <li><a href="https://top-fully.com/userinfo.php?from=space&amp;mod=space&amp;userinfo=erwin.law_449462&amp;com=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kejadian hari ini di curup</a></li>
+                    <li><a href="https://bravelight.net/userinfo.php?username=harvey_rutt-449462&amp;do=profile&amp;op=userinfo&amp;name=Your_Account&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kejadian hari ini di curup</a></li>
+                    <li><a href="https://constico.com/userinfo.php?com=profile&amp;from=space&amp;op=userinfo&amp;username=lewis-hathaway_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kejadian hari ini di curup</a></li>
+                    <li><a href="https://blakebusinessservices.com/profile.php?mod=space&amp;do=profile&amp;username=charis_nazario_449462&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kejadian hari ini di curup</a></li>
+                    <li><a href="https://dexitex.com/profile.php?com=profile&amp;name=Your_Account&amp;from=space&amp;do=profile&amp;userinfo=lorrine.flockhart_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kejadian hari ini di curup</a></li>
+                    <li><a href="https://clinicalpsychologistme.com/profile.php?username=adan.lamontagne_449462&amp;name=Your_Account&amp;do=profile&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>kejadian hari ini di curup</a></li>
+                </ul>
+            </div>
 
-      <div class="ng-price popular">
-        <h3>Developer License</h3>
-        <div class="old">Rp 499.000</div>
-        <div class="new">Rp 249.000</div>
-        <ul>
-          <li>Theme NewsGo</li>
-          <li>Untuk 3 website</li>
-          <li>Dummy content</li>
-          <li>Panduan instalasi</li>
-          <li>Support prioritas</li>
-        </ul>
-        <a class="ng-btn" href="#">Pesan Sekarang</a>
-      </div>
+            <!-- Kategori 2: Info Terkini & Pemda -->
+            <div class="category-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900">Info Terkini & Pemda</h3>
+                        <p class="text-xs text-slate-500">Kabar Dinas & Pemerintahan Daerah</p>
+                    </div>
+                </div>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="https://brandwoot.com/profile.php?username=louann_driskell-449462&amp;op=userinfo&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info terkini rejang lebong</a></li>
+                    <li><a href="https://sortprofit-business.com/profile.php?mod=space&amp;user=stephen.mcalister-449462&amp;name=Your_Account&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info terkini rejang lebong</a></li>
+                    <li><a href="https://lintense.com/userinfo.php?from=space&amp;com=profile&amp;name=Your_Account&amp;username=teodoro-deniehy_449462&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info terkini rejang lebong</a></li>
+                    <li><a href="https://nodeliverances.com/profile.php?name=Your_Account&amp;com=profile&amp;username=adan.lamontagne_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info terkini rejang lebong</a></li>
+                    <li><a href="https://weseoco.com/profile.php?name=Your_Account&amp;com=profile&amp;from=space&amp;username=hwa-code.449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info terkini rejang lebong</a></li>
+                    <li><a href="https://prrush.com/userinfo.php?com=profile&amp;name=Your_Account&amp;action=view&amp;user=lorrine.flockhart_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info terkini rejang lebong</a></li>
+                    <li><a href="https://nexuswoot.com/userinfo.php?com=profile&amp;username=erwin.law_449462&amp;from=space&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita pemda rejang lebong</a></li>
+                    <li><a href="https://cyberzootopia.com/userinfo.php?op=userinfo&amp;action=view&amp;username=erwin.law_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita pemda rejang lebong</a></li>
+                    <li><a href="https://clinicalkeynote.com/userinfo.php?from=space&amp;do=profile&amp;name=Your_Account&amp;user=teodoro-deniehy_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita pemda rejang lebong</a></li>
+                    <li><a href="https://bravelight.net/profile.php?from=space&amp;do=profile&amp;name=Your_Account&amp;username=lesley-mancuso-449462&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita bengkulu terkini</a></li>
+                    <li><a href="https://medley-web.com/userinfo.php?userinfo=louann_driskell-449462&amp;com=profile&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita bengkulu terkini</a></li>
+                    <li><a href="https://theappcode.net/profile.php?op=userinfo&amp;com=profile&amp;username=adan.lamontagne_449462&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita bengkulu terkini</a></li>
+                    <li><a href="https://consultingfirm-usa.com/profile.php?from=space&amp;userinfo=lesley-mancuso-449462&amp;action=view&amp;com=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita bengkulu terkini</a></li>
+                    <li><a href="https://gemstonic.com/userinfo.php?from=space&amp;mod=space&amp;userinfo=hwa-code.449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita bengkulu terkini</a></li>
+                    <li><a href="https://manufax.net/profile.php?op=userinfo&amp;com=profile&amp;action=view&amp;username=israel-shank_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita bengkulu terkini</a></li>
+                </ul>
+            </div>
 
-      <div class="ng-price">
-        <h3>Agency License</h3>
-        <div class="old">Rp 999.000</div>
-        <div class="new">Rp 499.000</div>
-        <ul>
-          <li>Theme NewsGo</li>
-          <li>Untuk 10 website</li>
-          <li>Boleh untuk jasa install</li>
-          <li>Dummy content</li>
-          <li>Support prioritas</li>
-        </ul>
-        <a class="ng-btn" href="#">Pesan Sekarang</a>
-      </div>
-    </div>
-  </div>
+            <!-- Kategori 3: Desa & Pembangunan -->
+            <div class="category-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900" id="desa">Pembangunan Desa</h3>
+                        <p class="text-xs text-slate-500">Inspirasi, Musrenbang & Bantuan Sosial</p>
+                    </div>
+                </div>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="https://skyflypro.com/userinfo.php?username=teodoro-deniehy_449462&amp;name=Your_Account&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>konten inspiratif desa</a></li>
+                    <li><a href="https://gemstonic.com/profile.php?com=profile&amp;user=louann_driskell-449462&amp;action=view&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>konten inspiratif desa</a></li>
+                    <li><a href="https://clinicalpsychologistme.com/userinfo.php?action=view&amp;name=Your_Account&amp;userinfo=erwin.law_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>konten inspiratif desa</a></li>
+                    <li><a href="https://machir-digitalmarketing.com/profile.php?username=adan.lamontagne_449462&amp;mod=space&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>konten inspiratif desa</a></li>
+                    <li><a href="https://clinicalpsychologistme.com/userinfo.php?do=profile&amp;action=view&amp;op=userinfo&amp;username=lesley-mancuso-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>konten inspiratif desa</a></li>
+                    <li><a href="https://beadvices.net/profile.php?action=view&amp;name=Your_Account&amp;username=adan.lamontagne_449462&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>konten inspiratif desa</a></li>
+                    <li><a href="https://bettaso.com/userinfo.php?op=userinfo&amp;from=space&amp;mod=space&amp;userinfo=harvey_rutt-449462&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>konten inspiratif desa</a></li>
+                    <li><a href="https://bookmarksmyweb.com/userinfo.php?action=view&amp;user=harvey_rutt-449462&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>konten inspiratif desa</a></li>
+                    <li><a href="https://clinicalpsychologistme.com/userinfo.php?action=view&amp;username=lewis-hathaway_449462&amp;do=profile&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info desa rejang lebong</a></li>
+                    <li><a href="https://thefishbowled.com/profile.php?do=profile&amp;com=profile&amp;username=lesley-mancuso-449462&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info desa rejang lebong</a></li>
+                    <li><a href="https://prospectuso.com/profile.php?username=israel-shank_449462&amp;op=userinfo&amp;from=space&amp;do=profile&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info desa rejang lebong</a></li>
+                    <li><a href="https://constico.com/profile.php?username=harvey_rutt-449462&amp;do=profile&amp;com=profile&amp;action=view&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info desa rejang lebong</a></li>
+                    <li><a href="https://gemstonic.com/profile.php?userinfo=stephen.mcalister-449462&amp;name=Your_Account&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info bantuan sosial</a></li>
+                    <li><a href="https://theappcode.net/profile.php?com=profile&amp;user=lesley-mancuso-449462&amp;from=space&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info bantuan sosial</a></li>
+                    <li><a href="https://prrush.com/userinfo.php?op=userinfo&amp;user=louann_driskell-449462&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>program pemerintah desa</a></li>
+                    <li><a href="https://weseoco.com/profile.php?do=profile&amp;action=view&amp;username=teodoro-deniehy_449462&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>program pemerintah desa</a></li>
+                    <li><a href="https://advertisingagencywebsite.com/profile.php?action=view&amp;user=lewis-hathaway_449462&amp;from=space&amp;do=profile&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>program pemerintah desa</a></li>
+                    <li><a href="https://prrush.com/userinfo.php?name=Your_Account&amp;userinfo=lewis-hathaway_449462&amp;do=profile&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>program pemerintah desa</a></li>
+                    <li><a href="https://dentalclinicuk.com/userinfo.php?com=profile&amp;mod=space&amp;action=view&amp;userinfo=harvey_rutt-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>program pemerintah desa</a></li>
+                    <li><a href="https://cyberzootopia.com/profile.php?name=Your_Account&amp;action=view&amp;from=space&amp;userinfo=charis_nazario_449462&amp;com=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>program pemerintah desa</a></li>
+                    <li><a href="https://addmeintopsite.com/userinfo.php?userinfo=stephen.mcalister-449462&amp;from=space&amp;mod=space&amp;do=profile&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>program pemerintah desa</a></li>
+                    <li><a href="https://foodbagtoday.com/profile.php?userinfo=hwa-code.449462&amp;action=view&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>program pemerintah desa</a></li>
+                    <li><a href="https://sortprofit-business.com/profile.php?username=charis_nazario_449462&amp;com=profile&amp;name=Your_Account&amp;from=space&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>musrenbang desa</a></li>
+                    <li><a href="https://bettaso.com/userinfo.php?mod=space&amp;com=profile&amp;username=louann_driskell-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>musrenbang desa</a></li>
+                    <li><a href="https://theappcode.net/profile.php?com=profile&amp;userinfo=lewis-hathaway_449462&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>musrenbang desa</a></li>
+                    <li><a href="https://gemstonic.com/userinfo.php?do=profile&amp;user=adan.lamontagne_449462&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>musrenbang desa</a></li>
+                    <li><a href="https://brushsharp.com/profile.php?user=teodoro-deniehy_449462&amp;from=space&amp;op=userinfo&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>musrenbang desa</a></li>
+                    <li><a href="https://bettaso.com/userinfo.php?from=space&amp;name=Your_Account&amp;user=lewis-hathaway_449462&amp;op=userinfo&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>musrenbang desa</a></li>
+                    <li><a href="https://gemstonic.com/profile.php?name=Your_Account&amp;user=lesley-mancuso-449462&amp;action=view&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>pembangunan desa terkini</a></li>
+                    <li><a href="https://beadvices.net/profile.php?name=Your_Account&amp;username=stephen.mcalister-449462&amp;from=space&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>pembangunan desa terkini</a></li>
+                </ul>
+            </div>
 
-  <div class="ng-container ng-faq">
-    <div class="ng-section-title">
-      <h2>FAQ NewsGo</h2>
-      <p>Pertanyaan yang sering ditanyakan sebelum membeli theme.</p>
-    </div>
+            <!-- Kategori 4: Aspirasi & Komunitas Digital -->
+            <div class="category-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900" id="aspirasi">Aspirasi & Komunitas</h3>
+                        <p class="text-xs text-slate-500">Suara Rakyat & Media Digital</p>
+                    </div>
+                </div>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="https://rocketmaxx.com/userinfo.php?name=Your_Account&amp;user=lesley-mancuso-449462&amp;action=view&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>aspirasi rakyat bengkulu</a></li>
+                    <li><a href="https://smartopya.com/userinfo.php?com=profile&amp;mod=space&amp;userinfo=lewis-hathaway_449462&amp;op=userinfo&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>aspirasi rakyat bengkulu</a></li>
+                    <li><a href="https://prospectuso.com/profile.php?from=space&amp;user=hwa-code.449462&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>aspirasi rakyat bengkulu</a></li>
+                    <li><a href="https://sortprofit-business.com/userinfo.php?mod=space&amp;do=profile&amp;userinfo=lesley-mancuso-449462&amp;from=space&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>aspirasi masyarakat digital</a></li>
+                    <li><a href="https://brandwoot.com/userinfo.php?com=profile&amp;action=view&amp;username=harvey_rutt-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>aspirasi masyarakat digital</a></li>
+                    <li><a href="https://prospectuso.com/userinfo.php?action=view&amp;com=profile&amp;username=lorrine.flockhart_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>aspirasi masyarakat rejang lebong</a></li>
+                    <li><a href="https://worldrankedlist.com/userinfo.php?username=hwa-code.449462&amp;do=profile&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>aspirasi masyarakat rejang lebong</a></li>
+                    <li><a href="https://letsbookmarktoday.com/userinfo.php?username=stephen.mcalister-449462&amp;com=profile&amp;action=view&amp;from=space&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>aspirasi masyarakat rejang lebong</a></li>
+                    <li><a href="https://evergreen-friends.com/userinfo.php?username=harvey_rutt-449462&amp;op=userinfo&amp;from=space&amp;name=Your_Account&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>media online rejang lebong</a></li>
+                    <li><a href="https://machir-digitalmarketing.com/profile.php?name=Your_Account&amp;from=space&amp;user=erwin.law_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>media online rejang lebong</a></li>
+                    <li><a href="https://theappcode.net/profile.php?name=Your_Account&amp;username=charis_nazario_449462&amp;op=userinfo&amp;from=space&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>media online rejang lebong</a></li>
+                    <li><a href="https://toppinvestors.com/userinfo.php?from=space&amp;userinfo=hwa-code.449462&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>media online rejang lebong</a></li>
+                </ul>
+            </div>
 
-    <details>
-      <summary>Apa itu NewsGo?</summary>
-      <p>NewsGo adalah theme WordPress untuk website berita, portal media, blog informasi, dan magazine online.</p>
-    </details>
+            <!-- Kategori 5: Viral & Media Visual -->
+            <div class="category-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900">Portal & Media Viral</h3>
+                        <p class="text-xs text-slate-500">Kabar Trending & Video Populer</p>
+                    </div>
+                </div>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="https://manufax.net/userinfo.php?mod=space&amp;action=view&amp;username=louann_driskell-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>portal berita rejang lebong</a></li>
+                    <li><a href="https://addmeintopsite.com/userinfo.php?action=view&amp;op=userinfo&amp;com=profile&amp;username=lewis-hathaway_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>portal berita rejang lebong</a></li>
+                    <li><a href="https://foodbagtoday.com/profile.php?com=profile&amp;from=space&amp;do=profile&amp;action=view&amp;username=charis_nazario_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>portal berita rejang lebong</a></li>
+                    <li><a href="https://moz-news.com/profile.php?com=profile&amp;name=Your_Account&amp;username=harvey_rutt-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>portal berita rejang lebong</a></li>
+                    <li><a href="https://extraordinarz.com/userinfo.php?from=space&amp;user=adan.lamontagne_449462&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>portal berita rejang lebong</a></li>
+                    <li><a href="https://mydesign-tool.com/profile.php?name=Your_Account&amp;com=profile&amp;user=stephen.mcalister-449462&amp;do=profile&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>portal berita rejang lebong</a></li>
+                    <li><a href="https://whelex.com/profile.php?username=israel-shank_449462&amp;action=view&amp;do=profile&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>portal berita rejang lebong</a></li>
+                    <li><a href="https://smartopya.com/profile.php?do=profile&amp;mod=space&amp;from=space&amp;user=erwin.law_449462&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>portal berita rejang lebong</a></li>
+                    <li><a href="https://skyflypro.com/userinfo.php?user=lesley-mancuso-449462&amp;com=profile&amp;do=profile&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info viral rejang lebong</a></li>
+                    <li><a href="https://dexitex.com/profile.php?name=Your_Account&amp;com=profile&amp;userinfo=lesley-mancuso-449462&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>info viral rejang lebong</a></li>
+                    <li><a href="https://brandwoot.com/userinfo.php?from=space&amp;op=userinfo&amp;user=hwa-code.449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita viral hari ini</a></li>
+                    <li><a href="https://moonzflower.com/userinfo.php?username=erwin.law_449462&amp;op=userinfo&amp;from=space&amp;com=profile&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita viral hari ini</a></li>
+                    <li><a href="https://addmeintopsite.com/userinfo.php?mod=space&amp;action=view&amp;username=harvey_rutt-449462&amp;do=profile&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita viral hari ini</a></li>
+                    <li><a href="https://gift-boxs.com/userinfo.php?com=profile&amp;username=charis_nazario_449462&amp;name=Your_Account&amp;action=view&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita viral hari ini</a></li>
+                    <li><a href="https://ascendio-corporate.com/userinfo.php?user=charis_nazario_449462&amp;name=Your_Account&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita viral hari ini</a></li>
+                    <li><a href="https://bookforme-store.com/profile.php?op=userinfo&amp;from=space&amp;name=Your_Account&amp;user=lesley-mancuso-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita viral hari ini</a></li>
+                    <li><a href="https://brushsharp.com/profile.php?name=Your_Account&amp;do=profile&amp;user=lewis-hathaway_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>berita viral hari ini</a></li>
+                    <li><a href="https://bettaso.com/userinfo.php?mod=space&amp;name=Your_Account&amp;username=stephen.mcalister-449462&amp;action=view" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>video viral hari ini</a></li>
+                    <li><a href="https://lintense.com/profile.php?name=Your_Account&amp;username=lorrine.flockhart_449462&amp;do=profile&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>video viral hari ini</a></li>
+                    <li><a href="https://clinicalkeynote.com/userinfo.php?action=view&amp;userinfo=charis_nazario_449462&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>video viral hari ini</a></li>
+                    <li><a href="https://medley-web.com/profile.php?userinfo=erwin.law_449462&amp;mod=space&amp;from=space&amp;com=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>video viral hari ini</a></li>
+                    <li><a href="https://worldrankedlist.com/userinfo.php?do=profile&amp;op=userinfo&amp;action=view&amp;com=profile&amp;user=teodoro-deniehy_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>video viral hari ini</a></li>
+                </ul>
+            </div>
 
-    <details>
-      <summary>Apakah cocok untuk website berita lokal?</summary>
-      <p>Sangat cocok. NewsGo dibuat dengan layout portal berita sehingga pas untuk media daerah, nasional, maupun niche tertentu.</p>
-    </details>
+            <!-- Kategori 6: Tips Kesehatan & Alami -->
+            <div class="category-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                    <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900" id="kesehatan">Tips & Kesehatan</h3>
+                        <p class="text-xs text-slate-500">Panduan Kesehatan Alami & Gaya Hidup</p>
+                    </div>
+                </div>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="https://advertisingagencywebsite.com/userinfo.php?action=view&amp;user=harvey_rutt-449462&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>tips kesehatan alami</a></li>
+                    <li><a href="https://addmeintopsite.com/profile.php?op=userinfo&amp;username=lesley-mancuso-449462&amp;do=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>tips kesehatan alami</a></li>
+                    <li><a href="https://ascendio-corporate.com/profile.php?name=Your_Account&amp;com=profile&amp;username=hwa-code.449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>tips kesehatan alami</a></li>
+                    <li><a href="https://brushsharp.com/profile.php?op=userinfo&amp;user=stephen.mcalister-449462&amp;mod=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>tips kesehatan alami</a></li>
+                    <li><a href="https://magetique.com/profile.php?mod=space&amp;op=userinfo&amp;username=erwin.law_449462&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>tips kesehatan alami</a></li>
+                    <li><a href="https://bettaso.com/userinfo.php?com=profile&amp;name=Your_Account&amp;userinfo=israel-shank_449462&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>tips kesehatan alami</a></li>
+                    <li><a href="https://gift-boxs.com/profile.php?mod=space&amp;name=Your_Account&amp;user=hwa-code.449462&amp;com=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>tips kesehatan alami</a></li>
+                    <li><a href="https://dominerbusiness.com/profile.php?username=stephen.mcalister-449462&amp;name=Your_Account&amp;op=userinfo&amp;action=view&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                    <li><a href="https://gift-boxs.com/profile.php?action=view&amp;from=space&amp;user=lesley-mancuso-449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                    <li><a href="https://consultingfirm-usa.com/profile.php?com=profile&amp;op=userinfo&amp;user=teodoro-deniehy_449462" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                    <li><a href="https://magetique.com/profile.php?mod=space&amp;action=view&amp;user=adan.lamontagne_449462&amp;from=space" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                    <li><a href="https://bettaso.com/profile.php?op=userinfo&amp;username=lorrine.flockhart_449462&amp;from=space&amp;com=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                    <li><a href="https://theappcode.net/userinfo.php?username=lorrine.flockhart_449462&amp;op=userinfo&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                    <li><a href="https://addmeintop10.com/profile.php?com=profile&amp;from=space&amp;user=teodoro-deniehy_449462&amp;do=profile&amp;op=userinfo" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                    <li><a href="https://gift-boxs.com/userinfo.php?name=Your_Account&amp;mod=space&amp;op=userinfo&amp;username=erwin.law_449462&amp;com=profile" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                    <li><a href="https://consultingfirm-usa.com/userinfo.php?user=israel-shank_449462&amp;action=view&amp;mod=space&amp;name=Your_Account" class="link-item text-slate-700 hover:text-primary-600 hover:underline flex items-center gap-1.5" target="_blank" rel="dofollow"><i class="fa-solid fa-angle-right text-xs text-slate-400"></i>manfaat toge bagi tubuh</a></li>
+                </ul>
+            </div>
 
-    <details>
-      <summary>Apakah bisa dipasang iklan Adsense?</summary>
-      <p>Bisa. NewsGo menyediakan beberapa area iklan yang dapat digunakan untuk banner Adsense atau iklan manual.</p>
-    </details>
+        </div>
 
-    <details>
-      <summary>Apakah tampilannya responsive?</summary>
-      <p>Ya, tampilan NewsGo sudah disesuaikan agar nyaman dibuka dari desktop maupun smartphone.</p>
-    </details>
+    </main>
 
-    <details>
-      <summary>Apakah boleh diedit sendiri?</summary>
-      <p>Boleh. Setelah membeli, pengguna dapat menyesuaikan warna, logo, menu, CSS, dan bagian lain sesuai kebutuhan.</p>
-    </details>
-  </div>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 text-sm py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-semibold text-slate-200">CobaKlik.eu.org</p>
+                <p class="text-xs text-slate-500 mt-0.5">Direktori Navigasi & Media Informasi Digital Terstruktur.</p>
+            </div>
+            <div class="text-xs text-slate-500 text-center md:text-right">
+                &copy; 2026 CobaKlik.eu.org. Hak Cipta Dilindungi Undang-Undang.
+            </div>
+        </div>
+    </footer>
 
-  <div class="ng-cta">
-    <div class="ng-container">
-      <h2>Siap Punya Website Berita Sendiri?</h2>
-      <p>Gunakan NewsGo untuk membangun portal berita yang modern, rapi, ringan, dan siap digunakan untuk publikasi konten setiap hari.</p>
-      <a class="ng-btn" href="#">Beli Theme NewsGo</a>
-    </div>
-  </div>
-</section>
-```
+    <!-- Filter JavaScript -->
+    <script>
+        function filterLinks() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const container = document.getElementById('linksContainer');
+            const cards = container.getElementsByClassName('category-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const links = cards[i].getElementsByTagName('a');
+                let cardHasMatch = false;
+
+                for (let j = 0; j < links.length; j++) {
+                    const text = links[j].innerText.toLowerCase();
+                    if (text.includes(input)) {
+                        links[j].parentElement.style.display = "";
+                        cardHasMatch = true;
+                    } else {
+                        links[j].parentElement.style.display = "none";
+                    }
+                }
+
+                if (cardHasMatch) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
